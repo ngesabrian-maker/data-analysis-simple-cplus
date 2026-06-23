@@ -6,7 +6,7 @@ using namespace std;
 class sample {
 public:
     double numbers[50];
-    int frequency; // Changed to int since it counts items
+    int frequency;
 };
 
 sample item;
@@ -15,7 +15,7 @@ sample item;
 double sumFn(double numbers[], int frequency) {
     double sum = 0.0;
     for (int i = 0; i < frequency; i++) {
-        sum += numbers[i]; // Fixed the =+ typo to +=
+        sum += numbers[i]; 
     }
     return sum;
 }
@@ -36,7 +36,7 @@ int main() {
     cout << "Input the frequency (max 50): " << endl;
     cin >> item.frequency;
 
-    // Guard against array overflow
+   
     if (item.frequency > 50 || item.frequency <= 0) {
         cout << "Invalid frequency size." << endl;
         return 1;
